@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\FutureGames\Hobby\C++\Bitty\bin\Debug-x64\Bitty\Bitty.dll</FullPath>
+      <FullPath>C:\Projects\Bitty\bin\Debug-x64\Bitty\Bitty.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\FutureGames\Hobby\C++\Bitty\x64\Debug\BittyTesting.exe</FullPath>
+      <FullPath>C:\Projects\Bitty\x64\Debug\BittyTesting.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

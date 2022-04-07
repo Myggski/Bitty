@@ -1,12 +1,9 @@
 #include "pch.h"
-
-namespace Bitty
-{
-	__declspec(dllimport) void Print();
-}
+#include "Bitty.h"
 
 TEST(TestCaseName, TestName) {
-	Bitty::Print();
+	Bitty::Log::GetCoreLogger()->warn("WARNING");
+	Bitty::Log::GetClientLogger()->info("INFO");
 	EXPECT_EQ(1, 1);
 	EXPECT_TRUE(true);
 }

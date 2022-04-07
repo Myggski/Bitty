@@ -1,0 +1,3 @@
+[submodule "Bitty/vendor/spdlog"]
+	path = Bitty/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
