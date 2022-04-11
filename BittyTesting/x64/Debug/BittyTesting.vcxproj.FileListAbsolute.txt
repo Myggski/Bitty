@@ -1,2 +1,0 @@
-D:\FutureGames\Hobby\C++\Bitty\BittyTesting\x64\Debug\BittyTesting.vcxproj.CopyComplete
-C:\Projects\Bitty\BittyTesting\x64\Debug\BittyTesting.vcxproj.CopyComplete

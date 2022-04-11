@@ -1,2 +1,0 @@
-﻿test.obj : error LNK2019: unresolved external symbol "class Bitty::Application * __cdecl Bitty::CreateApplication(void)" (?CreateApplication@Bitty@@YAPEAVApplication@1@XZ) referenced in function main
-C:\Projects\Bitty\x64\Debug\BittyTesting.exe : fatal error LNK1120: 1 unresolved externals
