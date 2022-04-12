@@ -5,7 +5,7 @@
       <UniqueIdentifier>{11E2E40C-7DF6-0CBE-4678-B01DB24B09EF}</UniqueIdentifier>
     </Filter>
     <Filter Include="Bitty\Events">
-      <UniqueIdentifier>{3a0c60b1-beb3-4126-b9ee-cbc7cf14a1f2}</UniqueIdentifier>
+      <UniqueIdentifier>{D57027BE-C1D3-B662-6A59-EF18569B82E5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -19,13 +19,21 @@
     <ClInclude Include="src\Bitty\EntryPoint.h">
       <Filter>Bitty</Filter>
     </ClInclude>
+    <ClInclude Include="src\Bitty\Events\ApplicationEvent.h">
+      <Filter>Bitty\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\Event.h">
+      <Filter>Bitty\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\KeyEvent.h">
+      <Filter>Bitty\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\MouseEvent.h">
+      <Filter>Bitty\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Bitty\Log.h">
       <Filter>Bitty</Filter>
     </ClInclude>
-    <ClInclude Include="src\Bitty\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Bitty\Events\Event.h" />
-    <ClInclude Include="src\Bitty\Events\KeyEvent.h" />
-    <ClInclude Include="src\Bitty\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bitty\Application.cpp">
