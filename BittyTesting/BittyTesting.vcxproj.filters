@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEventTest.cpp">
+      <Filter>src\Bitty\Events</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{10a63231-76de-4504-bbcb-414aeadd51c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Bitty">
+      <UniqueIdentifier>{3a230aa0-a493-4030-b60e-fdbb49dad429}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Bitty\Events">
+      <UniqueIdentifier>{b853428f-640f-486a-8916-119b1db2440f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
