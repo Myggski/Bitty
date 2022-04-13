@@ -16,10 +16,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="src\Bitty\Events\ApplicationEventTest.cpp">
+    <ClCompile Include="src\Bitty\Events\WindowResizeEventTest.cpp">
       <Filter>src\Bitty\Events</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

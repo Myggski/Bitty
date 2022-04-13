@@ -1,21 +1,20 @@
 #pragma once
 
 #include "Core.h"
-#include "Events/Event.h"
 
 namespace Bitty {
-	class BITTY_API Application
+	class BITTY_API application
 	{
 	public:
-		Application();
-		virtual ~Application();
+		application();
+		virtual ~application();
 
-		void Run();
+		void run();
 	};
 
 	/// <summary>
 	/// To be defined in client
 	/// </summary>
 	/// <returns></returns>
-	Application* CreateApplication();
+	application* create_application();
 }

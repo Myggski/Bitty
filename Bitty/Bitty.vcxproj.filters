@@ -7,6 +7,15 @@
     <Filter Include="Bitty\Events">
       <UniqueIdentifier>{D57027BE-C1D3-B662-6A59-EF18569B82E5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Bitty\Events\ApplicationEvents">
+      <UniqueIdentifier>{8DCAF816-79F0-C27D-6236-48494EFBE749}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bitty\Events\KeyEvents">
+      <UniqueIdentifier>{E2378080-CE31-A9D2-B79E-3FE3A3370F3F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bitty\Events\MouseEvents">
+      <UniqueIdentifier>{22B2B80F-0ED7-0790-3722-ED1F23A606AE}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Bitty.h" />
@@ -19,21 +28,54 @@
     <ClInclude Include="src\Bitty\EntryPoint.h">
       <Filter>Bitty</Filter>
     </ClInclude>
-    <ClInclude Include="src\Bitty\Events\ApplicationEvent.h">
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\AppRenderEvent.h">
+      <Filter>Bitty\Events\ApplicationEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\AppTickEvent.h">
+      <Filter>Bitty\Events\ApplicationEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\AppUpdateEvent.h">
+      <Filter>Bitty\Events\ApplicationEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\WindowCloseEvent.h">
+      <Filter>Bitty\Events\ApplicationEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\WindowResizeEvent.h">
+      <Filter>Bitty\Events\ApplicationEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\EventBase.h">
       <Filter>Bitty\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Bitty\Events\Event.h">
-      <Filter>Bitty\Events</Filter>
+    <ClInclude Include="src\Bitty\Events\KeyEvents\KeyEventBase.h">
+      <Filter>Bitty\Events\KeyEvents</Filter>
     </ClInclude>
-    <ClInclude Include="src\Bitty\Events\KeyEvent.h">
-      <Filter>Bitty\Events</Filter>
+    <ClInclude Include="src\Bitty\Events\KeyEvents\KeyPressedEvent.h">
+      <Filter>Bitty\Events\KeyEvents</Filter>
     </ClInclude>
-    <ClInclude Include="src\Bitty\Events\MouseEvent.h">
-      <Filter>Bitty\Events</Filter>
+    <ClInclude Include="src\Bitty\Events\KeyEvents\KeyReleasedEvent.h">
+      <Filter>Bitty\Events\KeyEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseButtonEventBase.h">
+      <Filter>Bitty\Events\MouseEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseButtonPressedEvent.h">
+      <Filter>Bitty\Events\MouseEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseButtonReleasedEvent.h">
+      <Filter>Bitty\Events\MouseEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseMovedEvent.h">
+      <Filter>Bitty\Events\MouseEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseScrolledEvent.h">
+      <Filter>Bitty\Events\MouseEvents</Filter>
     </ClInclude>
     <ClInclude Include="src\Bitty\Log.h">
       <Filter>Bitty</Filter>
     </ClInclude>
+    <ClInclude Include="src\Bitty\Events\EventDispatcher.h" />
+    <ClInclude Include="src\Bitty\Events\EventType.h" />
+    <ClInclude Include="src\Bitty\Events\EventCategory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bitty\Application.cpp">
@@ -42,5 +84,19 @@
     <ClCompile Include="src\Bitty\Log.cpp">
       <Filter>Bitty</Filter>
     </ClCompile>
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\WindowResizeEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\WindowCloseEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppUpdateEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppTickEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppRenderEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyEventBase.cpp" />
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyPressedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyReleasedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonEventBase.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonPressedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonReleasedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseMovedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseScrolledEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\EventBase.cpp" />
   </ItemGroup>
 </Project>

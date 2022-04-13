@@ -3,12 +3,12 @@
 
 #ifdef BITTY_PLATFORM_WINDOWS
 
-extern Bitty::Application* Bitty::CreateApplication();
+extern Bitty::application* Bitty::create_application();
 
 int main(int argc, char** argv)
 {
-	auto app = Bitty::CreateApplication();
-	app->Run();
+	auto app = Bitty::create_application();
+	app->run();
 	delete app;
 }
 

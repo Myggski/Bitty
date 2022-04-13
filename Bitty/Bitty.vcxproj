@@ -147,14 +147,41 @@
     <ClInclude Include="src\Bitty\Application.h" />
     <ClInclude Include="src\Bitty\Core.h" />
     <ClInclude Include="src\Bitty\EntryPoint.h" />
-    <ClInclude Include="src\Bitty\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Bitty\Events\Event.h" />
-    <ClInclude Include="src\Bitty\Events\KeyEvent.h" />
-    <ClInclude Include="src\Bitty\Events\MouseEvent.h" />
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\AppRenderEvent.h" />
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\AppTickEvent.h" />
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\AppUpdateEvent.h" />
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\WindowCloseEvent.h" />
+    <ClInclude Include="src\Bitty\Events\ApplicationEvents\WindowResizeEvent.h" />
+    <ClInclude Include="src\Bitty\Events\EventBase.h" />
+    <ClInclude Include="src\Bitty\Events\EventCategory.h" />
+    <ClInclude Include="src\Bitty\Events\EventDispatcher.h" />
+    <ClInclude Include="src\Bitty\Events\EventType.h" />
+    <ClInclude Include="src\Bitty\Events\KeyEvents\KeyEventBase.h" />
+    <ClInclude Include="src\Bitty\Events\KeyEvents\KeyPressedEvent.h" />
+    <ClInclude Include="src\Bitty\Events\KeyEvents\KeyReleasedEvent.h" />
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseButtonEventBase.h" />
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseButtonPressedEvent.h" />
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseButtonReleasedEvent.h" />
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseMovedEvent.h" />
+    <ClInclude Include="src\Bitty\Events\MouseEvents\MouseScrolledEvent.h" />
     <ClInclude Include="src\Bitty\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bitty\Application.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppRenderEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppTickEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppUpdateEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\WindowCloseEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\WindowResizeEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\EventBase.cpp" />
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyPressedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyEventBase.cpp" />
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyReleasedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonEventBase.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonPressedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonReleasedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseMovedEvent.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseScrolledEvent.cpp" />
     <ClCompile Include="src\Bitty\Log.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

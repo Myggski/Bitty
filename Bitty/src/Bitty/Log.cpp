@@ -3,16 +3,16 @@
 
 namespace Bitty
 {
-	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
-	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
+	std::shared_ptr<spdlog::logger> log::core_logger;
+	std::shared_ptr<spdlog::logger> log::client_logger;
 
-	void Log::Init()
+	void log::init()
 	{
 		spdlog::set_pattern("%^[%T] %n: %v%$");
-		s_CoreLogger = spdlog::stdout_color_mt("BITTY");
-		s_CoreLogger->set_level(spdlog::level::trace);
+		core_logger = spdlog::stdout_color_mt("BITTY");
+		core_logger->set_level(spdlog::level::trace);
 
-		s_ClientLogger = spdlog::stdout_color_mt("APP");
-		s_ClientLogger->set_level(spdlog::level::trace);
+		client_logger = spdlog::stdout_color_mt("APP");
+		client_logger->set_level(spdlog::level::trace);
 	}
 }

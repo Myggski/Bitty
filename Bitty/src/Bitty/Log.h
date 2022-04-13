@@ -6,29 +6,29 @@
 #include "spdlog/spdlog.h"
 
 namespace Bitty {
-	class BITTY_API Log
+	class BITTY_API log
 	{
 	public:
-		static void Init();
+		static void init();
 
-		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger;  }
-		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger;  }
+		inline static std::shared_ptr<spdlog::logger>& get_core_logger() { return core_logger;  }
+		inline static std::shared_ptr<spdlog::logger>& get_client_logger() { return client_logger;  }
 	private:
-		static std::shared_ptr<spdlog::logger> s_CoreLogger;
-		static std::shared_ptr<spdlog::logger> s_ClientLogger;
+		static std::shared_ptr<spdlog::logger> core_logger;
+		static std::shared_ptr<spdlog::logger> client_logger;
 	};
 }
 
 // Core log macros
-#define BITTY_CORE_TRACE(...)::Bitty::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define BITTY_CORE_INFO(...)::Bitty::Log::GetCoreLogger()->info(__VA_ARGS__)
-#define BITTY_CORE_WARN(...)::Bitty::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define BITTY_CORE_ERROR(...)::Bitty::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define BITTY_CORE_CRITICAL(...)::Bitty::Log::GetCoreLogger()->critical(__VA_ARGS__)
+#define BITTY_CORE_TRACE(...)::Bitty::log::get_core_logger()->trace(__VA_ARGS__)
+#define BITTY_CORE_INFO(...)::Bitty::log::get_core_logger()->info(__VA_ARGS__)
+#define BITTY_CORE_WARN(...)::Bitty::log::get_core_logger()->warn(__VA_ARGS__)
+#define BITTY_CORE_ERROR(...)::Bitty::log::get_core_logger()->error(__VA_ARGS__)
+#define BITTY_CORE_CRITICAL(...)::Bitty::log::get_core_logger()->critical(__VA_ARGS__)
 
 // Client log macros
-#define BITTY_TRACE(...)::Bitty::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define BITTY_INFO(...)::Bitty::Log::GetClientLogger()->info(__VA_ARGS__)
-#define BITTY_WARN(...)::Bitty::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define BITTY_ERROR(...)::Bitty::Log::GetClientLogger()->error(__VA_ARGS__)
-#define BITTY_CRITICAL(...)::Bitty::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define BITTY_TRACE(...)::Bitty::log::get_client_logger()->trace(__VA_ARGS__)
+#define BITTY_INFO(...)::Bitty::log::get_client_logger()->info(__VA_ARGS__)
+#define BITTY_WARN(...)::Bitty::log::get_client_logger()->warn(__VA_ARGS__)
+#define BITTY_ERROR(...)::Bitty::log::get_client_logger()->error(__VA_ARGS__)
+#define BITTY_CRITICAL(...)::Bitty::log::get_client_logger()->critical(__VA_ARGS__)
