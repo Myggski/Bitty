@@ -14,6 +14,7 @@ namespace Bitty
 	{
 		friend class event_dispatcher;
 	public:
+		virtual ~event_base() = default;
 		virtual EventType get_event_type() const = 0;
 		virtual const char* get_name() const = 0;
 		virtual int get_category_flags() const = 0;

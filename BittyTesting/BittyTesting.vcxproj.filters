@@ -10,15 +10,39 @@
     <Filter Include="src\Bitty\Events">
       <UniqueIdentifier>{4C1748D1-3810-6723-6142-4CA84D9A462F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Bitty\Events\ApplicationEvents">
+      <UniqueIdentifier>{24c58734-e2f1-47e1-95a9-5ae004137927}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="src\Bitty\Events\WindowResizeEventTest.cpp">
-      <Filter>src\Bitty\Events</Filter>
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\WindowCloseEventTest.cpp">
+      <Filter>src\Bitty\Events\ApplicationEvents</Filter>
     </ClCompile>
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\WindowResizeEventTest.cpp">
+      <Filter>src\Bitty\Events\ApplicationEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppRenderEventTest.cpp">
+      <Filter>src\Bitty\Events\ApplicationEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppTickEventTest.cpp">
+      <Filter>src\Bitty\Events\ApplicationEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bitty\Events\ApplicationEvents\AppUpdateEventTest.cpp">
+      <Filter>src\Bitty\Events\ApplicationEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyPressedEventTest.cpp" />
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyReleasedEventTest.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonPressedEventTest.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonReleasedEventTest.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseMovedEventTest.cpp" />
+    <ClCompile Include="src\Bitty\Events\MouseEvents\MouseScrolledEventTest.cpp" />
+    <ClCompile Include="src\Bitty\Events\EventDispatcherTest.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)gmock\gmock-all.cc" />
+    <ClCompile Include="src\Bitty\LogTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

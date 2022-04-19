@@ -8,7 +8,7 @@ namespace Bitty
 	inline std::string mouse_button_released_event::to_string() const
 	{
 		std::stringstream ss;
-		ss << "MouseButtonReleasedEvent: " << _button;
+		ss << "MouseButtonReleased: " << _button;
 		return ss.str();
 	}
 }

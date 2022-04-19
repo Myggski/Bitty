@@ -16,7 +16,7 @@ namespace Bitty
 		std::string to_string() const override;
 
 		EVENT_CLASS_TYPE(MouseMoved)
-			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
 		float _mouse_x{};
 		float _mouse_y{};

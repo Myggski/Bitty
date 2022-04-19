@@ -12,6 +12,6 @@ inline uint32_t Bitty::window_resize_event::get_height() const { return _height;
 inline std::string Bitty::window_resize_event::to_string() const
 {
 	std::stringstream ss;
-	ss << "WindowResizeEvent: " << _width << ", " << _height;
+	ss << "WindowResize: " << _width << ", " << _height;
 	return ss.str();
 }

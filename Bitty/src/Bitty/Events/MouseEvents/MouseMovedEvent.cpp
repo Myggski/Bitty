@@ -10,7 +10,7 @@ namespace Bitty
 	inline std::string mouse_moved_event::to_string() const
 	{
 		std::stringstream ss;
-		ss << "MouseMoveEvent: " << _mouse_x << ", " << _mouse_y;
+		ss << "MouseMoved: " << _mouse_x << ", " << _mouse_y;
 		return ss.str();
 	}
 }

@@ -12,7 +12,7 @@ namespace Bitty
 	std::string key_pressed_event::to_string() const
 	{
 		std::stringstream ss;
-		ss << "KeyPressedEvent: " << _key_code << " (" << _repeat_count << " repeats";
+		ss << "KeyPressed: " << _key_code << " (" << _repeat_count << " repeats)";
 		return ss.str();
 	}
 }
