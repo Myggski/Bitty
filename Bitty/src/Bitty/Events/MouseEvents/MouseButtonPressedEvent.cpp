@@ -1,6 +1,5 @@
+#include "bittypch.h"
 #include "MouseButtonPressedEvent.h"
-
-#include <sstream>
 
 namespace Bitty
 {

@@ -1,9 +1,8 @@
-#include "../../../pch.h"
+#include "pch.h"
 #include "Bitty/Events/EventBase.h"
 #include "Bitty/Events/EventDispatcher.h"
 #include "Bitty/Events/ApplicationEvents/AppRenderEvent.h"
 #include "Bitty/Events/ApplicationEvents/AppTickEvent.h"
-#include <functional>
 
 namespace {
     TEST(EventDispatcherTest, DispatchMatchedType)

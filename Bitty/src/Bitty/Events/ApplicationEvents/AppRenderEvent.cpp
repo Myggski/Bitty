@@ -1,3 +1,4 @@
+#include "bittypch.h"
 #include "AppRenderEvent.h"
 
 namespace Bitty

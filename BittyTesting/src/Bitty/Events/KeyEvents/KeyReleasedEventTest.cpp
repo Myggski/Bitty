@@ -1,6 +1,5 @@
-#include "../../../../pch.h"
+#include "pch.h"
 #include "Bitty/Events/KeyEvents/KeyReleasedEvent.h"
-#include <sstream>
 
 namespace {
     const int key_code_a = static_cast<int>('a');

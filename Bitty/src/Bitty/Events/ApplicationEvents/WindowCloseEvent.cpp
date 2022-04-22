@@ -1,3 +1,4 @@
+#include "bittypch.h"
 #include "WindowCloseEvent.h"
 
 namespace Bitty

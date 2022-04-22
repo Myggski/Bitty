@@ -1,6 +1,5 @@
+#include "bittypch.h"
 #include "WindowResizeEvent.h"
-
-#include <sstream>
 
 inline Bitty::window_resize_event::window_resize_event(uint32_t width, uint32_t height)
 	: _width(width), _height(height) {}

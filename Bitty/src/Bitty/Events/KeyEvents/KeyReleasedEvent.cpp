@@ -1,6 +1,5 @@
+#include "bittypch.h"
 #include "KeyReleasedEvent.h"
-
-#include <sstream>
 
 namespace Bitty
 {

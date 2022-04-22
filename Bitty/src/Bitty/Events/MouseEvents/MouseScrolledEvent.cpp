@@ -1,3 +1,4 @@
+#include "bittypch.h"
 #include "MouseScrolledEvent.h"
 
 namespace Bitty

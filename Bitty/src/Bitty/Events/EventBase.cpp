@@ -1,3 +1,4 @@
+#include "bittypch.h"
 #include "EventBase.h"
 
 namespace Bitty

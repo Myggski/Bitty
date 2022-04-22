@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Window.h"
 
 namespace Bitty {
 	class BITTY_API application
@@ -10,6 +11,9 @@ namespace Bitty {
 		virtual ~application();
 
 		void run();
+	private:
+		std::unique_ptr<window> _window;
+		bool _running = true;
 	};
 
 	/// <summary>

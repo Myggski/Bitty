@@ -1,3 +1,4 @@
+#include "bittypch.h"
 #include "AppUpdateEvent.h"
 
 namespace Bitty

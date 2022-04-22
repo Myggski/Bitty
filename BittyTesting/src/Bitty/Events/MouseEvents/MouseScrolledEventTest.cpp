@@ -1,4 +1,4 @@
-#include "../../../../pch.h"
+#include "pch.h"
 #include "Bitty/Events/MouseEvents/MouseMovedEvent.h"
 #include "Bitty/Events/MouseEvents/MouseScrolledEvent.h"
 

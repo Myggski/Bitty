@@ -2,8 +2,6 @@
 
 #include "../EventBase.h"
 
-#include <sstream>
-
 namespace Bitty
 {
 	class BITTY_API mouse_moved_event : public event_base

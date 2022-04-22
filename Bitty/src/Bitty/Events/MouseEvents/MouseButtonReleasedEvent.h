@@ -2,8 +2,6 @@
 
 #include "MouseButtonEventBase.h"
 
-#include <sstream>
-
 namespace Bitty
 {
 	class BITTY_API mouse_button_released_event : public mouse_button_event_base

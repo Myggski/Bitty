@@ -1,12 +1,11 @@
 workspace "Bitty"
 architecture "x64"
 
-configurations
-		{
-			"Debug",
-			"Release",
-			"Dist"
-		}
+configurations {
+    "Debug",
+    "Release",
+    "Dist"
+}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
@@ -18,33 +17,36 @@ language "C++"
 targetdir("bin/" .. outputdir .. "/%{prj.name}")
 objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
-files
-		{
-			"%{prj.name}/src/**.h",
-			"%{prj.name}/src/**.cpp"
-		}
+pchheader "bittypch.h"
+pchsource "Bitty/src/bittypch.cpp"
 
-includedirs
-		{
-			"%{prj.name}/src",
-			"%{prj.name}/vendor/spdlog/include"
-		}
+nuget {
+    "glfw:3.3.7"
+}
+
+files {
+    "%{prj.name}/src/**.h",
+    "%{prj.name}/src/**.cpp"
+}
+
+includedirs {
+    "%{prj.name}/src",
+    "%{prj.name}/vendor/spdlog/include"
+}
 
 filter "system:windows"
 cppdialect "C++17"
 staticruntime "off"
 systemversion "latest"
 
-defines
-		{
-			"BITTY_PLATFORM_WINDOWS",
-			"BITTY_BUILD_DLL"
-		}
+defines {
+    "BITTY_PLATFORM_WINDOWS",
+    "BITTY_BUILD_DLL"
+}
 
-postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/BittyTesting\"")
-		}
+postbuildcommands {
+    ('{COPY} %{cfg.buildtarget.relpath} "../bin/' .. outputdir .. '/BittyTesting"')
+}
 
 filter "configurations:Debug"
 defines "BITTY_DEBUG"
@@ -66,38 +68,38 @@ language "C++"
 targetdir("bin/" .. outputdir .. "/%{prj.name}")
 objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
-nuget
-		{
-			"Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn:1.8.1.5",
-			"gmock:1.10.0"
-		}
+pchheader "pch.h"
+pchsource "BittyTesting/src/pch.cpp"
 
-files
-		{
-			"%{prj.name}/**.h",
-			"%{prj.name}/**.cpp"
-		}
+nuget {
+    "Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn:1.8.1.5",
+    "gmock:1.11.0",
+	"glfw:3.3.7"
+}
 
-includedirs
-		{
-			"Bitty/vendor/spdlog/include",
-			"Bitty/src"
-		}
+files {
+    "%{prj.name}/**.h",
+    "%{prj.name}/**.cpp"
+}
 
-links
-		{
-			"Bitty"
-		}
+includedirs {
+    "%{prj.name}/src",
+    "Bitty/vendor/spdlog/include",
+    "Bitty/src"
+}
+
+links {
+    "Bitty"
+}
 
 filter "system:windows"
 cppdialect "C++17"
 staticruntime "off"
 systemversion "latest"
 
-defines
-		{
-			"BITTY_PLATFORM_WINDOWS"
-		}
+defines {
+    "BITTY_PLATFORM_WINDOWS"
+}
 
 filter "configurations:Debug"
 defines "BITTY_DEBUG"
@@ -111,7 +113,6 @@ filter "configurations:Dist"
 defines "BITTY_DIST"
 optimize "On"
 
-postbuildcommands
-		{
-			("{COPY} ../bin/" .. outputdir .. "/Bitty/Bitty.dll" .. " ../bin/" .. outputdir .. "/%{prj.name}")
-		}
+postbuildcommands {
+    ("{COPY} ../bin/" .. outputdir .. "/Bitty/Bitty.dll" .. " ../bin/" .. outputdir .. "/%{prj.name}")
+}

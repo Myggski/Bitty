@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bittypch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>BITTY_PLATFORM_WINDOWS;BITTY_BUILD_DLL;BITTY_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -96,7 +97,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bittypch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>BITTY_PLATFORM_WINDOWS;BITTY_BUILD_DLL;BITTY_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -120,7 +122,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bittypch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>BITTY_PLATFORM_WINDOWS;BITTY_BUILD_DLL;BITTY_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -165,6 +168,10 @@
     <ClInclude Include="src\Bitty\Events\MouseEvents\MouseMovedEvent.h" />
     <ClInclude Include="src\Bitty\Events\MouseEvents\MouseScrolledEvent.h" />
     <ClInclude Include="src\Bitty\Log.h" />
+    <ClInclude Include="src\Bitty\Platform\WindowsWindow.h" />
+    <ClInclude Include="src\Bitty\Window.h" />
+    <ClInclude Include="src\bittypch.h" />
+    <ClInclude Include="src\Bitty\WindowProps.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bitty\Application.cpp" />
@@ -174,8 +181,8 @@
     <ClCompile Include="src\Bitty\Events\ApplicationEvents\WindowCloseEvent.cpp" />
     <ClCompile Include="src\Bitty\Events\ApplicationEvents\WindowResizeEvent.cpp" />
     <ClCompile Include="src\Bitty\Events\EventBase.cpp" />
-    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyPressedEvent.cpp" />
     <ClCompile Include="src\Bitty\Events\KeyEvents\KeyEventBase.cpp" />
+    <ClCompile Include="src\Bitty\Events\KeyEvents\KeyPressedEvent.cpp" />
     <ClCompile Include="src\Bitty\Events\KeyEvents\KeyReleasedEvent.cpp" />
     <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonEventBase.cpp" />
     <ClCompile Include="src\Bitty\Events\MouseEvents\MouseButtonPressedEvent.cpp" />
@@ -183,8 +190,24 @@
     <ClCompile Include="src\Bitty\Events\MouseEvents\MouseMovedEvent.cpp" />
     <ClCompile Include="src\Bitty\Events\MouseEvents\MouseScrolledEvent.cpp" />
     <ClCompile Include="src\Bitty\Log.cpp" />
+    <ClCompile Include="src\Bitty\Platform\WindowsWindow.cpp" />
+    <ClCompile Include="src\Bitty\Window.cpp" />
+    <ClCompile Include="src\bittypch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Bitty\WindowProps.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\glfw.3.3.7\build\native\glfw.targets" Condition="Exists('..\packages\glfw.3.3.7\build\native\glfw.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\glfw.3.3.7\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glfw.3.3.7\build\native\glfw.targets'))" />
+  </Target>
 </Project>
